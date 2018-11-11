@@ -16,7 +16,8 @@ RUN apk add --no-cache --virtual .build-deps ca-certificates curl \
  && rm -rf v2ray-v$VER-linux-64 \
  && chgrp -R 0 /v2raybin \
  && chmod -R g+rwX /v2raybin 
- 
+
+
 ADD entrypoint.sh /entrypoint.sh
 
 RUN chmod +x /entrypoint.sh 
